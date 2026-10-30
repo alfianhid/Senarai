@@ -1,0 +1,34 @@
+[
+  {
+    "id": "staff",
+    "labelId": "Staf",
+    "labelEn": "Staff",
+    "sensitivities": ["general"],
+    "tags": [
+      "logistics.makassar",
+      "ops",
+      "customer",
+      "hr.policy",
+      "finance.reimburse",
+      "it.access",
+      "onboarding"
+    ],
+    "canSeeAuditOfOthers": false
+  },
+  {
+    "id": "manager",
+    "labelId": "Manajer",
+    "labelEn": "Manager",
+    "sensitivities": ["general", "management"],
+    "tags": "*",
+    "canSeeAuditOfOthers": true
+  },
+  {
+    "id": "admin",
+    "labelId": "Admin",
+    "labelEn": "Admin",
+    "sensitivities": ["general", "management"],
+    "tags": "*",
+    "canSeeAuditOfOthers": true
+  }
+]

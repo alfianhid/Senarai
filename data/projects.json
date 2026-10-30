@@ -1,0 +1,32 @@
+[
+  {
+    "id": "makassar-q4",
+    "code": "MKQ4",
+    "nameKey": "project.makassar",
+    "name": "Distribusi Makassar Q4",
+    "nameEn": "Makassar Q4 Distribution",
+    "topicTags": ["logistics.makassar", "ops", "customer", "vendor.contract"],
+    "ownerId": "A2",
+    "ownerChannel": "WhatsApp · #ops-makassar"
+  },
+  {
+    "id": "onboarding-2026",
+    "code": "ONB1",
+    "nameKey": "project.onboarding",
+    "name": "Onboarding Karyawan 2026",
+    "nameEn": "Employee Onboarding 2026",
+    "topicTags": ["hr.policy", "finance.reimburse", "it.access", "onboarding", "ops"],
+    "ownerId": "A3",
+    "ownerChannel": "WhatsApp · #hr-umum"
+  },
+  {
+    "id": "proyek-kenari",
+    "code": "KNRI",
+    "nameKey": "project.kenari",
+    "name": "Proyek Kenari",
+    "nameEn": "Project Kenari",
+    "topicTags": ["kenari", "acquisition"],
+    "ownerId": "A2",
+    "ownerChannel": "WhatsApp · #mgmt-strategi"
+  }
+]

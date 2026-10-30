@@ -1,0 +1,408 @@
+   ▲ Next.js 15.1.6
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.0.135:3000
+
+ ✓ Starting...
+ ✓ Ready in 4.4s
+ ○ Compiling /ask ...
+ ✓ Compiled /ask in 5.8s (632 modules)
+ GET /ask 200 in 6329ms
+ GET /ask 200 in 71ms
+ ○ Compiling /api/ask ...
+ ✓ Compiled /api/ask in 651ms (653 modules)
+ POST /api/ask 200 in 1445ms
+ ○ Compiling /ask/[threadId] ...
+ ✓ Compiled /ask/[threadId] in 552ms (674 modules)
+ GET /ask/TH-ZHUZYD 200 in 1489ms
+ GET /ask 200 in 113ms
+ POST /api/ask 200 in 640ms
+ GET /ask/TH-0SJEHQ 200 in 51ms
+ GET /ask 200 in 39ms
+ POST /api/ask 200 in 628ms
+ GET /ask/TH-LIZSZ5 200 in 40ms
+ GET /ask 200 in 35ms
+ POST /api/ask 200 in 623ms
+ GET /ask/TH-7WJWHC 200 in 40ms
+ GET /ask 200 in 47ms
+ POST /api/ask 200 in 621ms
+ GET /ask/TH-8A7SA0 200 in 39ms
+ ✓ Compiled /audit in 376ms (680 modules)
+ GET /audit 200 in 692ms
+ POST /api/ask 200 in 629ms
+ POST /api/ask 200 in 625ms
+ ✓ Compiled /api/threads/[threadId] in 416ms (682 modules)
+ GET /api/threads/TH-TAFAHZ 200 in 1232ms
+ POST /api/ask 200 in 632ms
+ GET /ask/TH-QHJKH3 200 in 167ms
+ ✓ Compiled in 1341ms (676 modules)
+ ✓ Compiled in 202ms (376 modules)
+ ✓ Compiled in 440ms (684 modules)
+ POST /api/ask 200 in 728ms
+ GET /api/threads/TH-BXN1JA 200 in 28ms
+ POST /api/ask 200 in 621ms
+ GET /api/threads/TH-Z9RPFQ 200 in 10ms
+ POST /api/ask 200 in 624ms
+ GET /api/threads/TH-0E35YK 200 in 22ms
+ POST /api/ask 200 in 610ms
+ GET /api/threads/TH-KZM6IC 200 in 9ms
+ POST /api/ask 200 in 626ms
+ GET /api/threads/TH-IY6IBD 200 in 31ms
+ POST /api/ask 200 in 624ms
+ GET /api/threads/TH-5AMN2E 200 in 10ms
+ POST /api/ask 200 in 618ms
+ GET /api/threads/TH-V1IJ51 200 in 23ms
+ POST /api/ask 200 in 617ms
+ GET /api/threads/TH-ZMK27Z 200 in 8ms
+ GET /ask/TH-ZMK27Z?source=S12 200 in 164ms
+ POST /api/ask 200 in 609ms
+ GET /api/threads/TH-0XIN6Q 200 in 20ms
+ ✓ Compiled /api/approvals in 267ms (672 modules)
+ POST /api/approvals 200 in 328ms
+ GET /api/threads/TH-0XIN6Q 200 in 15ms
+ ✓ Compiled /api/audit in 308ms (674 modules)
+ GET /api/audit 200 in 371ms
+ ✓ Compiled /api/reset in 390ms (676 modules)
+ POST /api/reset 200 in 434ms
+ POST /api/ask 200 in 635ms
+ GET /api/threads/TH-SX5B1P 200 in 27ms
+ ✓ Compiled /api/scope in 344ms (678 modules)
+ POST /api/scope 200 in 407ms
+ POST /api/ask 200 in 629ms
+ GET /api/threads/TH-P2VEAY 200 in 29ms
+ GET /api/audit 200 in 17ms
+ POST /api/scope 403 in 10ms
+ POST /api/ask 200 in 616ms
+ GET /api/threads/TH-C7HR7N 200 in 33ms
+ POST /api/ask 200 in 618ms
+ GET /api/threads/TH-ZLKSK5 200 in 9ms
+ POST /api/ask 200 in 613ms
+ GET /api/threads/TH-EOQZYB 200 in 28ms
+ POST /api/ask 200 in 614ms
+ GET /api/threads/TH-LAESAL 200 in 11ms
+ POST /api/ask 200 in 625ms
+ GET /api/threads/TH-JUTVJ8 200 in 24ms
+ POST /api/reset 200 in 14ms
+ POST /api/ask 200 in 622ms
+ GET /api/threads/TH-CO752T 200 in 9ms
+ ✓ Compiled /api/ingest in 409ms (680 modules)
+ POST /api/ingest 200 in 475ms
+ POST /api/ask 200 in 624ms
+ GET /api/threads/TH-VPJ7T2 200 in 32ms
+ POST /api/ask 200 in 618ms
+ GET /api/threads/TH-KZ88JH 200 in 21ms
+ POST /api/ask 200 in 611ms
+ GET /api/threads/TH-WVGJFC 200 in 26ms
+ POST /api/reset 200 in 13ms
+ POST /api/reset 200 in 11ms
+ ✓ Compiled /ask in 342ms (393 modules)
+ GET /ask 200 in 496ms
+ POST /api/ask 200 in 622ms
+ GET /ask/TH-VD9IDL 200 in 42ms
+ GET /ask 200 in 39ms
+ POST /api/ask 200 in 612ms
+ GET /ask/TH-S0P0S3 200 in 30ms
+ GET /ask 200 in 32ms
+ POST /api/ask 200 in 620ms
+ GET /ask/TH-L0M8II 200 in 45ms
+ GET /ask 200 in 34ms
+ POST /api/ask 200 in 616ms
+ GET /ask/TH-AMY21T 200 in 42ms
+ GET /ask 200 in 56ms
+ POST /api/ask 200 in 613ms
+ GET /ask/TH-QGX7UU 200 in 41ms
+ ✓ Compiled /audit in 272ms (398 modules)
+ GET /ask/TH-QGX7UU 200 in 290ms
+ GET /audit 200 in 617ms
+ GET /ask/TH-AMY21T 200 in 420ms
+ GET /ask/TH-VD9IDL 200 in 421ms
+ POST /api/ask 200 in 641ms
+ GET /api/threads/TH-94RAHI 200 in 37ms
+ POST /api/ask 200 in 614ms
+ GET /api/threads/TH-MDUOC2 200 in 9ms
+ POST /api/ask 200 in 615ms
+ GET /api/threads/TH-HNJ9HC 200 in 24ms
+ POST /api/ask 200 in 625ms
+ GET /api/threads/TH-5FUA39 200 in 9ms
+ POST /api/ask 200 in 625ms
+ GET /api/threads/TH-VBAVKO 200 in 25ms
+ POST /api/ask 200 in 621ms
+ GET /api/threads/TH-MY9DNS 200 in 10ms
+ POST /api/ask 200 in 626ms
+ GET /api/threads/TH-FSC244 200 in 26ms
+ POST /api/ask 200 in 611ms
+ GET /api/threads/TH-OQ9D2Q 200 in 9ms
+ GET /ask/TH-OQ9D2Q?source=S12 200 in 75ms
+ POST /api/ask 200 in 621ms
+ GET /api/threads/TH-1JLGVA 200 in 23ms
+ POST /api/approvals 200 in 17ms
+ GET /api/threads/TH-1JLGVA 200 in 10ms
+ GET /api/audit 200 in 14ms
+ POST /api/reset 200 in 10ms
+ POST /api/ask 200 in 619ms
+ GET /api/threads/TH-TJEWDM 200 in 23ms
+ POST /api/scope 200 in 17ms
+ POST /api/ask 200 in 625ms
+ GET /api/threads/TH-M86AEY 200 in 22ms
+ GET /api/audit 200 in 8ms
+ POST /api/scope 403 in 10ms
+ POST /api/ask 200 in 616ms
+ GET /api/threads/TH-JZ6EXA 200 in 20ms
+ POST /api/ask 200 in 620ms
+ GET /api/threads/TH-77CL58 200 in 13ms
+ POST /api/ask 200 in 621ms
+ GET /api/threads/TH-N4AN4U 200 in 21ms
+ POST /api/ask 200 in 626ms
+ GET /api/threads/TH-JNPLB6 200 in 10ms
+ POST /api/ask 200 in 620ms
+ GET /api/threads/TH-KR8T79 200 in 23ms
+ POST /api/reset 200 in 8ms
+ POST /api/ask 200 in 618ms
+ GET /api/threads/TH-IFJT9B 200 in 9ms
+ POST /api/ingest 200 in 13ms
+ POST /api/ask 200 in 617ms
+ GET /api/threads/TH-JESRCV 200 in 293ms
+ POST /api/ask 200 in 633ms
+ GET /api/threads/TH-30G4A6 200 in 22ms
+ POST /api/ask 200 in 610ms
+ GET /api/threads/TH-HHQ85X 200 in 21ms
+ POST /api/reset 200 in 9ms
+ POST /api/ask 200 in 621ms
+ GET /api/threads/TH-EF2WAV 200 in 28ms
+ POST /api/ask 200 in 625ms
+ GET /api/threads/TH-4I59DX 200 in 8ms
+ POST /api/ask 200 in 622ms
+ GET /api/threads/TH-QHLS0U 200 in 21ms
+ ✓ Compiled in 284ms (343 modules)
+ ✓ Compiled /api/reset in 245ms (360 modules)
+ POST /api/reset 200 in 375ms
+ ✓ Compiled /api/ask in 139ms (376 modules)
+ POST /api/ask 200 in 855ms
+ ✓ Compiled /api/threads/[threadId] in 154ms (378 modules)
+ GET /api/threads/TH-VJHD2E 200 in 226ms
+ POST /api/ask 200 in 634ms
+ GET /api/threads/TH-ST95EJ 200 in 9ms
+ POST /api/ask 200 in 623ms
+ GET /api/threads/TH-ES4LFH 200 in 20ms
+ POST /api/ask 200 in 617ms
+ GET /api/threads/TH-SHEL5B 200 in 9ms
+ POST /api/ask 200 in 621ms
+ GET /api/threads/TH-7JSP4Z 200 in 21ms
+ POST /api/ask 200 in 622ms
+ GET /api/threads/TH-Y7ATNL 200 in 8ms
+ POST /api/ask 200 in 623ms
+ GET /api/threads/TH-L6XBGN 200 in 24ms
+ POST /api/ask 200 in 617ms
+ GET /api/threads/TH-4YGFTF 200 in 8ms
+ GET /ask/TH-4YGFTF?source=S12 200 in 161ms
+ POST /api/ask 200 in 613ms
+ GET /api/threads/TH-YR4RPD 200 in 22ms
+ ✓ Compiled /api/approvals in 242ms (380 modules)
+ POST /api/approvals 200 in 301ms
+ GET /api/threads/TH-YR4RPD 200 in 13ms
+ ✓ Compiled /api/audit in 181ms (382 modules)
+ GET /api/audit 200 in 254ms
+ POST /api/reset 200 in 13ms
+ POST /api/ask 200 in 626ms
+ GET /api/threads/TH-0HJ7PK 200 in 28ms
+ ✓ Compiled /api/scope in 205ms (384 modules)
+ POST /api/scope 200 in 276ms
+ POST /api/ask 200 in 628ms
+ GET /api/threads/TH-ET674N 200 in 23ms
+ GET /api/audit 200 in 11ms
+ POST /api/scope 403 in 10ms
+ POST /api/ask 200 in 626ms
+ GET /api/threads/TH-7BWRLX 200 in 24ms
+ POST /api/ask 200 in 617ms
+ GET /api/threads/TH-TOZYA0 200 in 9ms
+ POST /api/ask 200 in 623ms
+ GET /api/threads/TH-5SADVB 200 in 20ms
+ POST /api/ask 200 in 621ms
+ GET /api/threads/TH-J8V8TX 200 in 22ms
+ POST /api/ask 200 in 626ms
+ GET /api/threads/TH-3UNDQJ 200 in 10ms
+ POST /api/reset 200 in 9ms
+ POST /api/ask 200 in 610ms
+ GET /api/threads/TH-VI3YP0 200 in 28ms
+ ✓ Compiled /api/ingest in 214ms (386 modules)
+ POST /api/ingest 200 in 289ms
+ POST /api/ask 200 in 645ms
+ GET /api/threads/TH-FYM6X3 200 in 25ms
+ POST /api/ask 200 in 617ms
+ GET /api/threads/TH-2PWWFR 200 in 22ms
+ POST /api/ask 200 in 624ms
+ GET /api/threads/TH-QY25W9 200 in 9ms
+ POST /api/reset 200 in 9ms
+ POST /api/ask 200 in 623ms
+ GET /api/threads/TH-RKL2O9 200 in 21ms
+ POST /api/ask 200 in 608ms
+ GET /api/threads/TH-F16KKH 200 in 7ms
+ POST /api/ask 200 in 612ms
+ GET /api/threads/TH-GMTGKF 200 in 25ms
+ POST /api/ask 200 in 615ms
+ GET /api/threads/TH-HRS11W 200 in 19ms
+ POST /api/ask 200 in 623ms
+ GET /api/threads/TH-IHPA6L 200 in 14ms
+ POST /api/ask 200 in 617ms
+ GET /api/threads/TH-IS2X3O 200 in 20ms
+ POST /api/ask 200 in 625ms
+ GET /api/threads/TH-8204Z8 200 in 23ms
+ POST /api/ask 200 in 618ms
+ GET /api/threads/TH-490U5B 200 in 21ms
+ GET /ask/TH-490U5B?source=S12 200 in 144ms
+ POST /api/ask 200 in 612ms
+ GET /api/threads/TH-IJ9UBJ 200 in 20ms
+ POST /api/approvals 200 in 13ms
+ GET /api/threads/TH-IJ9UBJ 200 in 9ms
+ GET /api/audit 200 in 11ms
+ POST /api/reset 200 in 8ms
+ POST /api/ask 200 in 624ms
+ GET /api/threads/TH-UNXDHA 200 in 17ms
+ POST /api/scope 200 in 16ms
+ POST /api/ask 200 in 615ms
+ GET /api/threads/TH-F06JU3 200 in 27ms
+ GET /api/audit 200 in 16ms
+ POST /api/scope 403 in 9ms
+ POST /api/ask 200 in 611ms
+ GET /api/threads/TH-UNILMF 200 in 22ms
+ POST /api/ask 200 in 615ms
+ GET /api/threads/TH-TMN4LZ 200 in 21ms
+ POST /api/ask 200 in 617ms
+ GET /api/threads/TH-D3TLPU 200 in 9ms
+ POST /api/ask 200 in 610ms
+ GET /api/threads/TH-YC1WDW 200 in 21ms
+ POST /api/ask 200 in 620ms
+ GET /api/threads/TH-K7D86R 200 in 8ms
+ POST /api/reset 200 in 9ms
+ POST /api/ask 200 in 611ms
+ GET /api/threads/TH-VQSQQW 200 in 27ms
+ POST /api/ingest 200 in 12ms
+ POST /api/ask 200 in 618ms
+ GET /api/threads/TH-RRWJOI 200 in 9ms
+ POST /api/ask 200 in 610ms
+ GET /api/threads/TH-IBPWU6 200 in 18ms
+ POST /api/ask 200 in 620ms
+ GET /api/threads/TH-9ZF33W 200 in 29ms
+ POST /api/reset 200 in 12ms
+ POST /api/ask 200 in 619ms
+ GET /api/threads/TH-7R4JG7 200 in 25ms
+ POST /api/ask 200 in 616ms
+ GET /api/threads/TH-GPB6UZ 200 in 10ms
+ POST /api/ask 200 in 625ms
+ GET /api/threads/TH-GLRPCJ 200 in 23ms
+ POST /api/ask 200 in 618ms
+ GET /api/threads/TH-6BMP56 200 in 21ms
+ POST /api/ask 200 in 614ms
+ GET /api/threads/TH-K0B08K 200 in 25ms
+ POST /api/ask 200 in 614ms
+ GET /api/threads/TH-ET23Z4 200 in 21ms
+ POST /api/ask 200 in 615ms
+ GET /api/threads/TH-WSJI07 200 in 28ms
+ POST /api/ask 200 in 613ms
+ GET /api/threads/TH-ALX301 200 in 21ms
+ POST /api/ask 200 in 620ms
+ GET /api/threads/TH-3JFP1U 200 in 20ms
+ POST /api/ask 200 in 614ms
+ GET /api/threads/TH-AVL3CM 200 in 22ms
+ POST /api/ask 200 in 611ms
+ GET /api/threads/TH-P2UUDP 200 in 21ms
+ POST /api/ask 200 in 625ms
+ GET /api/threads/TH-P06PBN 200 in 22ms
+ POST /api/ask 200 in 617ms
+ GET /api/threads/TH-YHTB7J 200 in 21ms
+ POST /api/ask 200 in 623ms
+ GET /api/threads/TH-5EIXN3 200 in 23ms
+ GET /ask/TH-5EIXN3?source=S12 200 in 71ms
+ POST /api/ask 200 in 611ms
+ GET /api/threads/TH-0X1166 200 in 20ms
+ POST /api/approvals 200 in 9ms
+ GET /api/threads/TH-0X1166 200 in 9ms
+ GET /api/audit 200 in 10ms
+ POST /api/reset 200 in 8ms
+ POST /api/ask 200 in 613ms
+ GET /api/threads/TH-1WYXIF 200 in 20ms
+ POST /api/scope 200 in 10ms
+ POST /api/ask 200 in 623ms
+ GET /api/threads/TH-5NO4AP 200 in 23ms
+ GET /api/audit 200 in 9ms
+ POST /api/scope 403 in 7ms
+ POST /api/ask 200 in 612ms
+ GET /api/threads/TH-295TG5 200 in 26ms
+ POST /api/ask 200 in 618ms
+ GET /api/threads/TH-3SLEL2 200 in 20ms
+ POST /api/ask 200 in 626ms
+ GET /api/threads/TH-6T76VD 200 in 20ms
+ POST /api/ask 200 in 626ms
+ GET /api/threads/TH-YNJMGO 200 in 19ms
+ POST /api/ask 200 in 616ms
+ GET /api/threads/TH-41KO6Y 200 in 26ms
+ POST /api/reset 200 in 14ms
+ POST /api/ask 200 in 622ms
+ GET /api/threads/TH-RM56DA 200 in 21ms
+ POST /api/ingest 200 in 10ms
+ POST /api/ask 200 in 624ms
+ GET /api/threads/TH-H0YAX2 200 in 23ms
+ POST /api/ask 200 in 623ms
+ GET /api/threads/TH-S66ZJ9 200 in 23ms
+ POST /api/ask 200 in 626ms
+ GET /api/threads/TH-Y4KVM7 200 in 21ms
+ POST /api/reset 200 in 10ms
+ ✓ Compiled / in 514ms (641 modules)
+ GET / 307 in 744ms
+ ✓ Compiled /api/ask in 158ms (376 modules)
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- C:\Users\User\OneDrive\Documents\Senarai\.next\server\webpack-runtime.js
+- C:\Users\User\OneDrive\Documents\Senarai\.next\server\app\api\ask\route.js
+- C:\Users\User\OneDrive\Documents\Senarai\node_modules\next\dist\server\require.js
+- C:\Users\User\OneDrive\Documents\Senarai\node_modules\next\dist\server\load-components.js
+- C:\Users\User\OneDrive\Documents\Senarai\node_modules\next\dist\build\utils.js
+- C:\Users\User\OneDrive\Documents\Senarai\node_modules\next\dist\build\swc\options.js
+- C:\Users\User\OneDrive\Documents\Senarai\node_modules\next\dist\build\swc\index.js
+- C:\Users\User\OneDrive\Documents\Senarai\node_modules\next\dist\build\analysis\parse-module.js
+- C:\Users\User\OneDrive\Documents\Senarai\node_modules\next\dist\build\analysis\get-page-static-info.js
+- C:\Users\User\OneDrive\Documents\Senarai\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\User\OneDrive\Documents\Senarai\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\User\OneDrive\Documents\Senarai\node_modules\next\dist\server\lib\start-server.js
+    at __webpack_require__.f.require (C:\Users\User\OneDrive\Documents\Senarai\.next\server\webpack-runtime.js:203:28)
+    at <unknown> (C:\Users\User\OneDrive\Documents\Senarai\.next\server\webpack-runtime.js:116:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (C:\Users\User\OneDrive\Documents\Senarai\.next\server\webpack-runtime.js:115:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (C:\Users\User\OneDrive\Documents\Senarai\.next\server\webpack-runtime.js:167:22)
+    at <unknown> (C:\Users\User\OneDrive\Documents\Senarai\.next\server\app\api\ask\route.js:1:2146)
+    at Object.<anonymous> (C:\Users\User\OneDrive\Documents\Senarai\.next\server\app\api\ask\route.js:1:2201) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/api/ask'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 2.3s (912 modules)
+ POST /api/ask 500 in 3252ms
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- C:\Users\User\OneDrive\Documents\Senarai\.next\server\webpack-runtime.js
+- C:\Users\User\OneDrive\Documents\Senarai\.next\server\pages\_document.js
+- C:\Users\User\OneDrive\Documents\Senarai\node_modules\next\dist\server\require.js
+- C:\Users\User\OneDrive\Documents\Senarai\node_modules\next\dist\server\load-components.js
+- C:\Users\User\OneDrive\Documents\Senarai\node_modules\next\dist\build\utils.js
+- C:\Users\User\OneDrive\Documents\Senarai\node_modules\next\dist\build\swc\options.js
+- C:\Users\User\OneDrive\Documents\Senarai\node_modules\next\dist\build\swc\index.js
+- C:\Users\User\OneDrive\Documents\Senarai\node_modules\next\dist\build\analysis\parse-module.js
+- C:\Users\User\OneDrive\Documents\Senarai\node_modules\next\dist\build\analysis\get-page-static-info.js
+- C:\Users\User\OneDrive\Documents\Senarai\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\User\OneDrive\Documents\Senarai\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\User\OneDrive\Documents\Senarai\node_modules\next\dist\server\lib\start-server.js
+    at __webpack_require__.f.require (C:\Users\User\OneDrive\Documents\Senarai\.next\server\webpack-runtime.js:203:28)
+    at <unknown> (C:\Users\User\OneDrive\Documents\Senarai\.next\server\webpack-runtime.js:116:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (C:\Users\User\OneDrive\Documents\Senarai\.next\server\webpack-runtime.js:115:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (C:\Users\User\OneDrive\Documents\Senarai\.next\server\webpack-runtime.js:167:22)
+    at <unknown> (C:\Users\User\OneDrive\Documents\Senarai\.next\server\app\api\ask\route.js:1:2146)
+    at Object.<anonymous> (C:\Users\User\OneDrive\Documents\Senarai\.next\server\app\api\ask\route.js:1:2201) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/api/ask'
+}
+ POST /api/ask 500 in 273ms
+[?25h

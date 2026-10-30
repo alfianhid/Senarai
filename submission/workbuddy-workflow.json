@@ -1,0 +1,251 @@
+{
+  "schema": "workbuddy.workflow/1",
+  "exportedAt": "2026-10-29T21:05:00+07:00",
+  "platform": {
+    "product": "WorkBuddy",
+    "mode": "agent",
+    "workspace": "Senarai",
+    "stack": [
+      "Next.js 15",
+      "React 19",
+      "TypeScript strict",
+      "Vitest 2",
+      "Playwright (verification only)"
+    ]
+  },
+  "project": {
+    "name": "Senarai",
+    "challenge": "Challenge A — The Workplace Brain",
+    "hackathon": "AI CAN DO IT Tencent Cloud Hackathon Indonesia 2026",
+    "deadline": "2026-11-01T23:59:00+07:00",
+    "blurb": "Project history assembled, sourced, per access rights."
+  },
+  "scopeDecision": {
+    "date": "2026-10-29",
+    "decision": "Ship the web app and a stdio MCP server. The MCP server was descoped in the morning and built the same evening.",
+    "reason": "The handbook requires WorkBuddy as the development platform, not as a runtime integration. That still holds, but a product an agent cannot call is a weaker product, and lib/ already held every guarantee, so the adapter cost one tool layer and one page.",
+    "consequences": [
+      "mcp/server.ts exposes five tools over stdio; lib/mcp/tools.ts holds the handlers and imports no SDK.",
+      "Each handler calls lib/api/handlers.ts, the same functions app/api/* call, so no guarantee is reimplemented.",
+      "mcp/dist/server.mjs is a one-file bundle; the client config needs no tsconfig and no path aliases.",
+      "/integrations prints the client config with the current actor and project filled in.",
+      "No SSE transport and no shared thread memory; both limits are printed on /integrations."
+    ]
+  },
+  "phases": [
+    {
+      "id": "phase-0",
+      "title": "Scaffold, tokens, shell",
+      "goal": "Types frozen, design tokens live, shell rendering at three breakpoints.",
+      "prompt": "Create types/domain.ts with the full domain model, the data/ dataset (projects, roles, actors, sources, audit seed), and the application shell: sidebar 264/72/off-canvas, top bar with breadcrumb and locale toggle. No UI library, no state library.",
+      "produced": [
+        "types/domain.ts",
+        "data/*.json",
+        "app/globals.css",
+        "components/shell/*"
+      ],
+      "verified": [
+        "npm run dev starts clean",
+        "/ redirects to /ask",
+        "shell at 1440 / 1024 / 390 px"
+      ]
+    },
+    {
+      "id": "phase-1",
+      "title": "Access control and retrieval",
+      "goal": "canRead() before any search, and a static answer rendered from real data.",
+      "prompt": "Write canRead(snapshot, source) as a pure synchronous function over project, topic tag and sensitivity. Call it in search() before ranking, and again in toCitation(). Then render the three-section answer from the dataset.",
+      "produced": [
+        "lib/access/*",
+        "lib/retrieval/*",
+        "lib/store/session.ts"
+      ],
+      "verified": [
+        "tests/access.test.ts",
+        "grep for forbidden/denied/locked/restricted returns nothing"
+      ]
+    },
+    {
+      "id": "phase-2",
+      "title": "Composition, gaps, conflict, masking",
+      "goal": "One answer assembled from visible sources only, with the gap engine running in code.",
+      "prompt": "Compose chronology, open items and gaps in a fixed order. Detect gaps with three deterministic rules (no-cause, ownerless-blocked-item, silent-interval at 5 days). Resolve conflicts by newer version, then recency. Mask NIK and phone numbers before composition.",
+      "produced": [
+        "lib/answer/*",
+        "lib/gaps/*",
+        "lib/conflict/resolve.ts",
+        "lib/mask/pii.ts"
+      ],
+      "verified": [
+        "tests/gaps.test.ts",
+        "tests/conflict.test.ts",
+        "tests/pii.test.ts"
+      ]
+    },
+    {
+      "id": "phase-3",
+      "title": "Ask API, approval gate, scenarios 1 and 2",
+      "goal": "A question produces a thread; a gap produces a draft that sends only on approval.",
+      "prompt": "Add POST /api/ask, GET /api/threads/[threadId] and POST /api/approvals over the shared handlers. Apply a 600 ms floor. The approval sheet is the only modal: cancel writes nothing, confirm appends one audit entry.",
+      "produced": [
+        "app/api/ask/route.ts",
+        "app/api/threads/[threadId]/route.ts",
+        "app/api/approvals/route.ts",
+        "components/answer/AnswerView.tsx"
+      ],
+      "verified": [
+        "scenario 1: staff vs manager, same shape",
+        "scenario 2: gap → draft → approve → audit row",
+        "curl diff of forbidden vs non-existent is empty"
+      ]
+    },
+    {
+      "id": "phase-4",
+      "title": "Scope mutation and the access matrix",
+      "goal": "A person can narrow their own scope, never widen it; the next answer reflects it.",
+      "prompt": "Add POST /api/scope and the /access matrix. Granting anything the role does not already carry returns 403. A revocation bumps the scope version and produces a new snapshot id, so two audit entries are comparable.",
+      "produced": [
+        "app/api/scope/route.ts",
+        "app/(workspace)/access/page.tsx",
+        "components/access/GrantToggle.tsx"
+      ],
+      "verified": [
+        "scenario 3: 9 rows → 8 rows after revoking the customer tag",
+        "audit shows SCP-5 then SCP-6",
+        "widening returns 403"
+      ]
+    },
+    {
+      "id": "phase-5",
+      "title": "Audit log and i18n",
+      "goal": "The record is a screen; the chrome is bilingual, the citations are not translated.",
+      "prompt": "Build /audit as a server-rendered table with caption and sticky header, scoped by role. Complete the ID/EN catalogue for chrome only. No hardcoded UI strings, no hex colours in components.",
+      "produced": [
+        "app/(workspace)/audit/page.tsx",
+        "app/api/audit/route.ts",
+        "lib/i18n/messages.ts"
+      ],
+      "verified": [
+        "/audit reachable in one click",
+        "both locales render all chrome",
+        "decision column distinguishes answered / empty / empty-equivalent"
+      ]
+    },
+    {
+      "id": "phase-6",
+      "title": "Tests, build, submission",
+      "goal": "Everything asserted that can be asserted; a production build that boots as a standalone server.",
+      "prompt": "Add a vitest suite over the guarantees, a scripted demo check against a running server, and the submission artifacts. Fix what the tests find.",
+      "produced": [
+        "tests/*.test.ts",
+        "scripts/verify-scenarios.mjs",
+        "submission/*",
+        "deployment.md"
+      ],
+      "verified": [
+        "npm test — 7 files, 39 tests",
+        "npm run verify — 9 checks pass",
+        "standalone server boots and answers on :3100"
+      ]
+    },
+    {
+      "id": "phase-7",
+      "title": "MCP server and the integrations page",
+      "goal": "The same lib/ core reachable from an MCP client, with the guarantee proven across the transport boundary.",
+      "prompt": "Add a stdio MCP server whose five tools are thin wrappers over lib/api/handlers.ts. Bundle it with esbuild so the client needs no TypeScript loader. Add an /integrations page that prints the client config with the current actor and project, and assert that the tool returns the same substance as the HTTP path.",
+      "produced": [
+        "lib/mcp/tools.ts",
+        "mcp/server.ts",
+        "mcp/dist/server.mjs",
+        "scripts/build-mcp.mjs",
+        "scripts/verify-mcp.mjs",
+        "app/(workspace)/integrations/page.tsx",
+        "components/integrations/ConfigBlock.tsx",
+        "tests/mcp.test.ts"
+      ],
+      "verified": [
+        "npm run verify:mcp — 23 checks over a real stdio handshake",
+        "npm test — tests/mcp.test.ts, 9 tests",
+        "/integrations renders in both locales with the absolute bundle path"
+      ]
+    }
+  ],
+  "verificationLoop": {
+    "pattern": "assert in code → run → read the failure → fix the code, not the test",
+    "commands": [
+      "npm run typecheck",
+      "npm test",
+      "npm run build",
+      "npm run start & npm run verify:all",
+      "npm run mcp:build && npm run verify:mcp"
+    ],
+    "findings": [
+      {
+        "found": "No chronology row cited a task card, so no single answer synthesised chat + document + task.",
+        "fix": "Closed tasks are history and now join the timeline; open tasks stay in section two. Staff answer: 9 rows across three source kinds.",
+        "evidence": "npm run verify → PASS T09 chat+doc+task synthesised"
+      },
+      {
+        "found": "POST /api/reset returned 404 in production, so a demo could not be reset on stage.",
+        "fix": "Env-gated with SENARAI_ALLOW_RESET=1 instead of a hard production block.",
+        "evidence": "deployment.md §6, §9"
+      },
+      {
+        "found": "deployment.md still described an MCP server that does not exist.",
+        "fix": "Rewritten for one process, standalone output, PM2 + Nginx.",
+        "evidence": "deployment.md"
+      },
+      {
+        "found": "The MCP server was descoped, so a judge asking \"how do I call this from an agent?\" had no answer.",
+        "fix": "Built the stdio server over lib/api/handlers.ts and an /integrations page that prints a pasteable config.",
+        "evidence": "npm run verify:mcp — 23/23, including two roles differing and the canonical empty surviving the transport"
+      },
+      {
+        "found": "npm start answered 404 on every route, because next start cannot serve output: standalone.",
+        "fix": "scripts/start.mjs copies .next/static, public/ and data/ into the standalone folder, then runs server.js.",
+        "evidence": "/ask, /integrations and /api/ask all 200 from the production build"
+      }
+    ]
+  },
+  "evidence": {
+    "build": {
+      "command": "npm run build:local",
+      "result": "Compiled successfully; 11 routes; .next/standalone/server.js present",
+      "note": "build:local only stubs Next's diagnostic trace writer, which a file-synced workspace denies. A normal VPS uses npm run build."
+    },
+    "tests": {
+      "command": "npm test",
+      "result": "13 files, 73 tests, 0 failures",
+      "log": "submission/logs/vitest.txt"
+    },
+    "scenarioCheck": {
+      "command": "npm run verify:all",
+      "result": "34 checks against the web app, 23 over MCP",
+      "log": "submission/logs/"
+    },
+    "screenshots": "shots/ (10 PNGs), mockups/ (9 PNGs)",
+    "mcp": {
+      "command": "npm run verify:mcp",
+      "result": "23 of 23 checks pass over stdio",
+      "log": "submission/logs/verify-mcp.txt"
+    }
+  },
+  "artifacts": {
+    "projectDescription": "submission/PROJECT.md",
+    "accountabilitySheet": "ACCOUNTABILITY.md",
+    "architectureDiagram": [
+      "submission/architecture.svg",
+      "submission/architecture.png"
+    ],
+    "demoScript": "submission/demo-script.md",
+    "testResults": "submission/test-results.md",
+    "sharingNotes": "submission/sharing-notes.md",
+    "deployment": "deployment.md",
+    "mcpServer": "mcp/dist/server.mjs (npm run mcp:build)",
+    "integrationsGuide": "/integrations"
+  },
+  "notes": [
+    "This export records how the product was built and verified in WorkBuddy. The MCP server is a second transport over the same lib/ core, not a dependency of the web app: both run without the other.",
+    "Every prompt above is a condensed form of prompts/phase-*.md, which remain in the repository as the long form."
+  ]
+}

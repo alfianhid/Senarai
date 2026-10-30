@@ -1,0 +1,25 @@
+
+> senarai@1.0.0 verify:improvements
+> node scripts/verify-improvements.mjs
+
+PASS  T21 lead answer is present and in prose
+PASS  T21 lead answer names the cause from the record
+PASS  T21 every lead citation resolves to a rendered citation
+PASS  T21 every chronology row carries an explanatory sentence
+PASS  T22 trace records the pipeline in execution order  (resolve_scope → search_sources → read_sources → resolve_conflicts → detect_gaps → compose → verify)
+PASS  T22 self-check passes on a fully cited answer
+PASS  T22 canonical empty carries no trace
+PASS  T23 returns the newer figure Rp750.000
+PASS  T23 cites both sources
+PASS  T23 says the SOP is the older source
+PASS  T23 conflict rule is named, not a score
+PASS  T24 leave entitlement answered from policy
+PASS  T25 English question produces an English answer body
+PASS  T25 English answer is not the Indonesian sentence
+PASS  T26 a newly ingested message appears in the next answer
+PASS  T26 the answer version increments  (v1 → v2)
+PASS  T26 the answer says its data changed
+PASS  T27 staff sees no record for the management-only budget
+PASS  T27 manager sees the budget figure
+
+19/19 passed

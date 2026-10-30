@@ -1,0 +1,44 @@
+[
+  {
+    "id": "AU-1041",
+    "at": "2026-10-25T09:12:00+07:00",
+    "actorId": "A1",
+    "actorRole": "staff",
+    "projectId": "makassar-q4",
+    "questionMasked": "Berapa lead time Surabaya ke Makassar?",
+    "scopeSnapshotId": "SCP-3",
+    "scopeVersion": 3,
+    "retrievedSourceIds": ["S2"],
+    "answerId": "AN-1041",
+    "decision": "answered",
+    "approvals": []
+  },
+  {
+    "id": "AU-1042",
+    "at": "2026-10-25T09:20:00+07:00",
+    "actorId": "A1",
+    "actorRole": "staff",
+    "projectId": "makassar-q4",
+    "questionMasked": "Berapa denda vendor Anugrah?",
+    "scopeSnapshotId": "SCP-3",
+    "scopeVersion": 3,
+    "retrievedSourceIds": [],
+    "answerId": "EMPTY",
+    "decision": "empty-equivalent",
+    "approvals": []
+  },
+  {
+    "id": "AU-1043",
+    "at": "2026-10-25T10:02:00+07:00",
+    "actorId": "A2",
+    "actorRole": "manager",
+    "projectId": "makassar-q4",
+    "questionMasked": "Kenapa stok telat di Makassar?",
+    "scopeSnapshotId": "SCP-4",
+    "scopeVersion": 4,
+    "retrievedSourceIds": ["S1", "S2", "S4", "S5", "S6", "S8", "S10", "S11", "S12"],
+    "answerId": "AN-1043",
+    "decision": "answered",
+    "approvals": [{ "gapId": "G1", "state": "approved", "at": "2026-10-25T10:04:00+07:00" }]
+  }
+]

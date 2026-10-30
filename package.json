@@ -1,0 +1,36 @@
+{
+  "name": "senarai",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "build:local": "node -r ./scripts/build-trace-shim.cjs ./node_modules/next/dist/bin/next build",
+    "start": "node scripts/start.mjs",
+    "test": "vitest run",
+    "verify": "node scripts/verify-scenarios.mjs",
+    "verify:extra": "node scripts/verify-extra.mjs",
+    "verify:improvements": "node scripts/verify-improvements.mjs",
+    "verify:all": "node scripts/verify-scenarios.mjs && node scripts/verify-extra.mjs && node scripts/verify-improvements.mjs && node scripts/canonical-hash.mjs && node scripts/verify-mcp.mjs",
+    "typecheck": "tsc --noEmit",
+    "verify:canonical": "node scripts/canonical-hash.mjs",
+    "mcp:build": "node scripts/build-mcp.mjs",
+    "verify:mcp": "node scripts/verify-mcp.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "next": "15.1.6",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "@types/node": "22.10.5",
+    "@types/react": "19.0.7",
+    "@types/react-dom": "19.0.3",
+    "playwright": "^1.64.1",
+    "typescript": "5.7.3",
+    "vitest": "^2.1.8"
+  }
+}

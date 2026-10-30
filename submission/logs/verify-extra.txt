@@ -1,0 +1,12 @@
+
+> senarai@1.0.0 verify:extra
+> node scripts/verify-extra.mjs
+
+
+PASS  T08 every chronology row and open item is cited
+PASS  T10 ?source=S12 renders the source server-side
+PASS  T18 cancel leaves the gap in draft and writes no audit entry
+PASS  T20 revocation reduces the next answer and the audit holds both snapshots  (9 → 8 rows, 3 snapshots)
+PASS  widening a scope the role does not carry is refused  (HTTP 403)
+
+5/5 passed

@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 980" width="1400" height="980" role="img" aria-label="Senarai architecture: one Next.js application where access is checked before retrieval">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6b6357"/>
+    </marker>
+    <style>
+      .serif { font-family: 'Source Serif 4', Georgia, serif; }
+      .sans { font-family: Inter, 'Segoe UI', system-ui, sans-serif; }
+      .mono { font-family: 'IBM Plex Mono', Consolas, monospace; }
+      .h { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; fill: #6b6357; font-weight: 600; }
+      .t { font-size: 14px; fill: #1a1713; }
+      .s { font-size: 11.5px; fill: #6b6357; }
+      .box { fill: #ffffff; stroke: #e1dcd1; stroke-width: 1; }
+      .chip { fill: #fdfcfa; stroke: #e8e3d9; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="980" fill="#faf8f4"/>
+
+  <text x="48" y="62" class="serif" font-size="30" font-weight="600" fill="#1a1713">Senarai — how one answer is assembled</text>
+  <text x="48" y="92" class="sans" font-size="14" fill="#4a443b">One Next.js application. Access is resolved and checked in code before any retrieval happens, so a source the asker may not read is never scored, ranked, counted or cited.</text>
+
+  <!-- Column A: browser -->
+  <text x="48" y="136" class="sans h">Browser</text>
+  <rect x="48" y="150" width="240" height="470" rx="10" class="box"/>
+  <rect x="66" y="172" width="204" height="40" rx="6" class="chip"/>
+  <text x="82" y="197" class="mono" font-size="13" fill="#1a1713">/ask</text>
+  <text x="196" y="197" class="sans s">compose</text>
+  <rect x="66" y="222" width="204" height="40" rx="6" class="chip"/>
+  <text x="82" y="247" class="mono" font-size="13" fill="#1a1713">/ask/[threadId]</text>
+  <text x="66" y="290" class="sans s">Three sections, citation marks,</text>
+  <text x="66" y="307" class="sans s">source drawer, gap cards,</text>
+  <text x="66" y="324" class="sans s">approval gate.</text>
+  <rect x="66" y="346" width="204" height="40" rx="6" class="chip"/>
+  <text x="82" y="371" class="mono" font-size="13" fill="#1a1713">/audit</text>
+  <rect x="66" y="396" width="204" height="40" rx="6" class="chip"/>
+  <text x="82" y="421" class="mono" font-size="13" fill="#1a1713">/access</text>
+  <text x="66" y="452" class="sans s">One question, one answer. Nothing</text>
+  <text x="66" y="469" class="sans s">streams, nothing collapses, no</text>
+  <text x="66" y="486" class="sans s">section is ever shortened.</text>
+  <text x="66" y="530" class="sans s">The client renders what the server</text>
+  <text x="66" y="547" class="sans s">already decided. It never filters, and</text>
+  <text x="66" y="564" class="sans s">never learns what it was not shown.</text>
+  <text x="66" y="596" class="sans s" fill="#8c2f39">A withheld answer looks exactly</text>
+  <text x="66" y="613" class="sans s" fill="#8c2f39">like an answer that does not exist.</text>
+
+  <line x1="292" y1="315" x2="316" y2="315" stroke="#6b6357" stroke-width="1.4" marker-end="url(#arrow)"/>
+
+  <!-- Column B: next.js -->
+  <text x="324" y="136" class="sans h">Next.js 15 · App Router</text>
+  <rect x="324" y="150" width="300" height="470" rx="10" class="box"/>
+  <text x="344" y="178" class="sans" font-size="12.5" font-weight="600" fill="#14564f">Server components</text>
+  <text x="344" y="200" class="sans s">The answer is rendered on the server;</text>
+  <text x="344" y="217" class="sans s">the browser receives HTML, not data.</text>
+  <text x="344" y="243" class="sans" font-size="12.5" font-weight="600" fill="#14564f">Route handlers</text>
+  <rect x="344" y="256" width="260" height="30" rx="5" class="chip"/>
+  <text x="356" y="276" class="mono" font-size="12" fill="#1a1713">POST /api/ask</text>
+  <rect x="344" y="292" width="260" height="30" rx="5" class="chip"/>
+  <text x="356" y="312" class="mono" font-size="12" fill="#1a1713">GET  /api/threads/[threadId]</text>
+  <rect x="344" y="328" width="260" height="30" rx="5" class="chip"/>
+  <text x="356" y="348" class="mono" font-size="12" fill="#1a1713">POST /api/approvals</text>
+  <rect x="344" y="364" width="260" height="30" rx="5" class="chip"/>
+  <text x="356" y="384" class="mono" font-size="12" fill="#1a1713">POST /api/scope</text>
+  <rect x="344" y="400" width="260" height="30" rx="5" class="chip"/>
+  <text x="356" y="420" class="mono" font-size="12" fill="#1a1713">GET  /api/audit</text>
+  <rect x="344" y="436" width="260" height="30" rx="5" class="chip"/>
+  <text x="356" y="456" class="mono" font-size="12" fill="#1a1713">POST /api/ingest</text>
+  <text x="344" y="492" class="sans s">Every answer is held for at least</text>
+  <text x="344" y="509" class="sans s">600 ms, so two responses cannot be</text>
+  <text x="344" y="526" class="sans s">told apart by how long they took.</text>
+  <text x="344" y="560" class="sans s">Thin transports. No business logic,</text>
+  <text x="344" y="577" class="sans s">no permission code of their own.</text>
+  <text x="344" y="596" class="sans s" fill="#14564f">Every route calls the same lib/</text>
+  <text x="344" y="613" class="sans s" fill="#14564f">functions, in the same order.</text>
+
+  <line x1="628" y1="315" x2="652" y2="315" stroke="#6b6357" stroke-width="1.4" marker-end="url(#arrow)"/>
+
+  <!-- Column C: lib -->
+  <text x="660" y="136" class="sans h">lib/ — every guarantee lives here</text>
+  <rect x="660" y="150" width="424" height="470" rx="10" class="box"/>
+
+  <circle cx="690" cy="192" r="13" fill="#f4f1ea" stroke="#e1dcd1"/>
+  <text x="690" y="197" class="mono" font-size="11.5" text-anchor="middle" fill="#4a443b">1</text>
+  <text x="716" y="190" class="sans t">Resolve the scope snapshot</text>
+  <text x="716" y="207" class="sans s">actor → role → projects, tags, sensitivities</text>
+
+  <rect x="672" y="226" width="400" height="62" rx="7" fill="#e7f0ee" stroke="#bfd8d3"/>
+  <circle cx="690" cy="257" r="13" fill="#ffffff" stroke="#bfd8d3"/>
+  <text x="690" y="262" class="mono" font-size="11.5" text-anchor="middle" fill="#14564f">2</text>
+  <text x="716" y="254" class="sans" font-size="14" font-weight="600" fill="#0e413c">canRead() — before any search</text>
+  <text x="716" y="272" class="sans s" fill="#14564f">project · topic tag · sensitivity. A source outside it is never scored.</text>
+
+  <circle cx="690" cy="312" r="13" fill="#f4f1ea" stroke="#e1dcd1"/>
+  <text x="690" y="317" class="mono" font-size="11.5" text-anchor="middle" fill="#4a443b">3</text>
+  <text x="716" y="310" class="sans t">Mask personal data</text>
+  <text x="716" y="327" class="sans s">NIK and phone numbers, before the text is composed</text>
+
+  <circle cx="690" cy="368" r="13" fill="#f4f1ea" stroke="#e1dcd1"/>
+  <text x="690" y="373" class="mono" font-size="11.5" text-anchor="middle" fill="#4a443b">4</text>
+  <text x="716" y="366" class="sans t">Ground the question, then search</text>
+  <text x="716" y="383" class="sans s">every content word must exist in readable data · IDF-weighted match</text>
+
+  <circle cx="690" cy="424" r="13" fill="#f4f1ea" stroke="#e1dcd1"/>
+  <text x="690" y="429" class="mono" font-size="11.5" text-anchor="middle" fill="#4a443b">5</text>
+  <text x="716" y="422" class="sans t">canRead() again, at citation time</text>
+  <text x="716" y="439" class="sans s">defence in depth: no citation is built for a hidden source</text>
+
+  <circle cx="690" cy="480" r="13" fill="#f4f1ea" stroke="#e1dcd1"/>
+  <text x="690" y="485" class="mono" font-size="11.5" text-anchor="middle" fill="#4a443b">6</text>
+  <text x="716" y="478" class="sans t">Compose the lead answer, then three sections</text>
+  <text x="716" y="495" class="sans s">a clause with no citation marker is dropped, never written</text>
+
+  <circle cx="690" cy="536" r="13" fill="#f4f1ea" stroke="#e1dcd1"/>
+  <text x="690" y="541" class="mono" font-size="11.5" text-anchor="middle" fill="#4a443b">7</text>
+  <text x="716" y="534" class="sans t">Conflicts, gaps, then verify</text>
+  <text x="716" y="551" class="sans s">version between docs, recency across kinds · self-check every claim</text>
+
+  <rect x="672" y="572" width="400" height="32" rx="6" fill="#fbeeee" stroke="#f0cfd3"/>
+  <text x="684" y="593" class="mono" font-size="10.5" fill="#8c2f39">no record → same payload as a topic never written</text>
+
+  <line x1="1088" y1="315" x2="1112" y2="315" stroke="#6b6357" stroke-width="1.4" marker-end="url(#arrow)"/>
+
+  <!-- Column D: state -->
+  <text x="1120" y="136" class="sans h">State</text>
+  <rect x="1120" y="150" width="232" height="126" rx="10" class="box"/>
+  <text x="1138" y="176" class="sans" font-size="12.5" font-weight="600" fill="#14564f">data/ · static</text>
+  <text x="1138" y="198" class="sans s">29 sources: chat, doc, task</text>
+  <text x="1138" y="217" class="sans s">3 projects · 4 actors · 3 roles</text>
+  <text x="1138" y="236" class="sans s">2 SOP vs chat conflicts</text>
+  <text x="1138" y="255" class="sans s">1 source carrying NIK + phone</text>
+
+  <rect x="1120" y="292" width="232" height="150" rx="10" class="box"/>
+  <text x="1138" y="318" class="sans" font-size="12.5" font-weight="600" fill="#14564f">in-memory store</text>
+  <text x="1138" y="340" class="sans s">threads · answers</text>
+  <text x="1138" y="359" class="sans s">scope grants · revocations</text>
+  <text x="1138" y="378" class="sans s">audit log (seeded)</text>
+  <text x="1138" y="397" class="sans s">approval state</text>
+  <text x="1138" y="422" class="sans s" fill="#8c2f39">A restart replays the seed.</text>
+
+  <rect x="1120" y="458" width="232" height="96" rx="10" fill="#fdfcfa" stroke="#e1dcd1"/>
+  <text x="1138" y="484" class="sans" font-size="12.5" font-weight="600" fill="#14564f">No dependencies</text>
+  <text x="1138" y="506" class="sans s">no database, no model call,</text>
+  <text x="1138" y="525" class="sans s">no third-party API, no key.</text>
+
+  <!-- Bottom: guarantees -->
+  <text x="48" y="672" class="sans h">What that buys</text>
+  <rect x="48" y="686" width="418" height="132" rx="10" class="box"/>
+  <text x="68" y="716" class="serif" font-size="17" font-weight="600" fill="#1a1713">Checked before search, not after</text>
+  <text x="68" y="742" class="sans s" font-size="12.5">A filtered source is never scored, ranked, counted</text>
+  <text x="68" y="761" class="sans s" font-size="12.5">or cited. The model is not asked to keep a secret it</text>
+  <text x="68" y="780" class="sans s" font-size="12.5">was never told.</text>
+
+  <rect x="490" y="686" width="418" height="132" rx="10" class="box"/>
+  <text x="510" y="716" class="serif" font-size="17" font-weight="600" fill="#1a1713">Identical, not merely similar</text>
+  <text x="510" y="742" class="sans s" font-size="12.5">A forbidden topic, a project outside scope and a</text>
+  <text x="510" y="761" class="sans s" font-size="12.5">topic nobody ever wrote return the same bytes, the</text>
+  <text x="510" y="780" class="sans s" font-size="12.5">same shape and the same 600 ms floor.</text>
+
+  <rect x="932" y="686" width="420" height="132" rx="10" class="box"/>
+  <text x="952" y="716" class="serif" font-size="17" font-weight="600" fill="#1a1713">An answer, then the evidence</text>
+  <text x="952" y="742" class="sans s" font-size="12.5">A cited lead paragraph answers the question; chronology,</text>
+  <text x="952" y="761" class="sans s" font-size="12.5">open items and gaps follow, always in that order. A gap</text>
+  <text x="952" y="780" class="sans s" font-size="12.5">names who might know — only from readable sources.</text>
+
+  <line x1="48" y1="856" x2="1352" y2="856" stroke="#e1dcd1"/>
+  <text x="48" y="886" class="sans" font-size="12" fill="#6b6357">One process · one build · PM2 + Nginx · state in memory. The audit log is the same code path as the answer, not a weaker side door.</text>
+  <text x="48" y="910" class="mono" font-size="11" fill="#8a8378">senarai · Challenge A, The Workplace Brain · AI CAN DO IT Tencent Cloud Hackathon Indonesia 2026</text>
+</svg>

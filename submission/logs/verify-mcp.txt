@@ -1,0 +1,29 @@
+
+> senarai@1.0.0 verify:mcp
+> node scripts/verify-mcp.mjs
+
+PASS  initialize handshake completes
+PASS  five tools are advertised  (senarai_approve, senarai_ask, senarai_get_thread, senarai_query_audit, senarai_revoke_scope)
+PASS  every tool has a description the model can plan from
+PASS  senarai_ask returns a payload
+PASS  the payload is answered, not empty
+PASS  the lead answer is present
+PASS  the trace survives the transport
+PASS  the self-check passes
+PASS  chronology is sourced  (9 rows)
+PASS  two roles get genuinely different answers over MCP  (12 rows vs 9)
+PASS  forbidden topic returns the canonical empty
+PASS  non-existent topic returns the canonical empty
+PASS  the two empties are byte-identical over MCP
+PASS  no withheld count leaks in the empty
+PASS  senarai_get_thread returns the same answer
+PASS  another actor's thread returns the canonical empty, not an error
+PASS  a gap can be confirmed over MCP  (Approved. One entry appended to the audit log for gap G1.)
+PASS  the approval is visible on the thread
+PASS  widening a scope the role does not carry is refused
+PASS  narrowing the actor's own scope is allowed  (Revoked customer. Scope is now version 6; the next answer is composed against the new snapshot.)
+PASS  the next answer reflects the narrowed scope  (8 rows after revoking customer)
+PASS  the audit log is readable over MCP
+PASS  staff audit entries are their own  (6 entries)
+
+23/23 passed

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "A1",
+    "name": "Rina Pratiwi",
+    "roleId": "staff",
+    "title": "Koordinator Gudang",
+    "projectIds": ["makassar-q4", "onboarding-2026"]
+  },
+  {
+    "id": "A2",
+    "name": "Andi Wijaya",
+    "roleId": "manager",
+    "title": "Manajer Operasional",
+    "projectIds": ["makassar-q4", "onboarding-2026", "proyek-kenari"]
+  },
+  {
+    "id": "A3",
+    "name": "Sari Dewi",
+    "roleId": "admin",
+    "title": "Admin & Kepatuhan",
+    "projectIds": ["makassar-q4", "onboarding-2026", "proyek-kenari"]
+  },
+  {
+    "id": "A4",
+    "name": "Budi Santoso",
+    "roleId": "staff",
+    "title": "Staf Pengadaan",
+    "projectIds": ["makassar-q4", "onboarding-2026"]
+  }
+]

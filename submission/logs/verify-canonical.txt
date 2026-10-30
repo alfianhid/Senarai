@@ -1,0 +1,5 @@
+Berapa denda kontrak Anugrah?   canonical:true   out of scope, content exists    sha b127c7615b7cf584
+Apa itu Proyek Kenari?          canonical:true   out of scope, project exists    sha b127c7615b7cf584
+Apa itu Proyek Nusantara?       canonical:true   project does not exist          sha b127c7615b7cf584
+
+PASS  all three bodies are byte-identical (sha b127c7615b7cf584)

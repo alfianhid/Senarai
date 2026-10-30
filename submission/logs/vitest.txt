@@ -1,0 +1,43 @@
+
+> senarai@1.0.0 test
+> vitest run
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+[1m[7m[36m RUN [39m[27m[22m [36mv2.1.8 [39m[90mC:/Users/User/OneDrive/Documents/Senarai[39m
+
+ [32m✓[39m tests/mcp.test.ts [2m([22m[2m9 tests[22m[2m)[22m[33m 6095[2mms[22m[39m
+   [33m[2m✓[22m[39m MCP tool layer — transport equivalence (T28)[2m > [22mreturns the same answer as the HTTP path for the same input [33m1219[2mms[22m[39m
+   [33m[2m✓[22m[39m MCP tool layer — transport equivalence (T28)[2m > [22mkeeps the 600 ms floor across the transport [33m609[2mms[22m[39m
+   [33m[2m✓[22m[39m MCP tool layer — transport equivalence (T28)[2m > [22mreturns the canonical empty for a forbidden topic, identical to a non-existent one [33m1220[2mms[22m[39m
+   [33m[2m✓[22m[39m MCP tool layer — transport equivalence (T28)[2m > [22mgives an unknown actor the canonical empty rather than an error [33m607[2mms[22m[39m
+   [33m[2m✓[22m[39m MCP tool layer — the tools cannot be used to escalate[2m > [22mreturns the canonical empty for another actor's thread [33m607[2mms[22m[39m
+   [33m[2m✓[22m[39m MCP tool layer — the tools cannot be used to escalate[2m > [22mrefuses to approve a gap on a thread the actor cannot see [33m609[2mms[22m[39m
+   [33m[2m✓[22m[39m MCP tool layer — the tools cannot be used to escalate[2m > [22mallows narrowing, and the next answer reflects it [33m1222[2mms[22m[39m
+ [32m✓[39m tests/onboarding.test.ts [2m([22m[2m9 tests[22m[2m)[22m[90m 27[2mms[22m[39m
+ [32m✓[39m tests/gaps.test.ts [2m([22m[2m6 tests[22m[2m)[22m[90m 25[2mms[22m[39m
+ [32m✓[39m tests/narrative.test.ts [2m([22m[2m7 tests[22m[2m)[22m[90m 32[2mms[22m[39m
+ [32m✓[39m tests/conflict.test.ts [2m([22m[2m4 tests[22m[2m)[22m[90m 11[2mms[22m[39m
+ [32m✓[39m tests/ingest.test.ts [2m([22m[2m4 tests[22m[2m)[22m[33m 2439[2mms[22m[39m
+   [33m[2m✓[22m[39m live ingestion[2m > [22madds an ingested source to the next answer to the same question [33m1217[2mms[22m[39m
+   [33m[2m✓[22m[39m live ingestion[2m > [22mdoes not let ingestion bypass permission: a new vendor.contract message stays unreadable to staff [33m1220[2mms[22m[39m
+ [32m✓[39m tests/access.test.ts [2m([22m[2m7 tests[22m[2m)[22m[90m 5[2mms[22m[39m
+ [32m✓[39m tests/agent-trace.test.ts [2m([22m[2m5 tests[22m[2m)[22m[90m 31[2mms[22m[39m
+ [32m✓[39m tests/canonical-empty.test.ts [2m([22m[2m5 tests[22m[2m)[22m[90m 3[2mms[22m[39m
+ [32m✓[39m tests/approval.test.ts [2m([22m[2m4 tests[22m[2m)[22m[33m 2427[2mms[22m[39m
+   [33m[2m✓[22m[39m approval gate (T17–T18)[2m > [22mdrafts a question only for a gap that has a visible knower [33m603[2mms[22m[39m
+   [33m[2m✓[22m[39m approval gate (T17–T18)[2m > [22mrecords one approval on confirm [33m609[2mms[22m[39m
+   [33m[2m✓[22m[39m approval gate (T17–T18)[2m > [22mwrites nothing on cancel: the gap returns to draft and the log is untouched [33m607[2mms[22m[39m
+   [33m[2m✓[22m[39m approval gate (T17–T18)[2m > [22mrefuses an approval for a gap that does not exist [33m607[2mms[22m[39m
+ [32m✓[39m tests/no-forbidden.test.ts [2m([22m[2m4 tests[22m[2m)[22m[90m 4[2mms[22m[39m
+ [32m✓[39m tests/latency.test.ts [2m([22m[2m3 tests[22m[2m)[22m[33m 1822[2mms[22m[39m
+   [33m[2m✓[22m[39m latency floor (T04)[2m > [22mtakes at least 600ms to answer a normal question [33m610[2mms[22m[39m
+   [33m[2m✓[22m[39m latency floor (T04)[2m > [22mtakes at least 600ms to return the canonical empty [33m606[2mms[22m[39m
+   [33m[2m✓[22m[39m latency floor (T04)[2m > [22mdoes not echo a forbidden question into the audit log [33m605[2mms[22m[39m
+ [32m✓[39m tests/pii.test.ts [2m([22m[2m6 tests[22m[2m)[22m[90m 3[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m13 passed[39m[22m[90m (13)[39m
+[2m      Tests [22m [1m[32m73 passed[39m[22m[90m (73)[39m
+[2m   Start at [22m 21:11:42
+[2m   Duration [22m 17.81s[2m (transform 268ms, setup 0ms, collect 1.20s, tests 12.92s, environment 2ms, prepare 1.40s)[22m
+

@@ -1,0 +1,28 @@
+
+> senarai@1.0.0 verify
+> node scripts/verify-scenarios.mjs
+
+┌─────────┬──────────────────────────────┬─────────────┬──────┬───────────┬────────────┬───────────┬──────┬─────────────────┬───────────────────────────────┐
+│ (index) │ label                        │ thread      │ ms   │ canonical │ chronology │ openItems │ gaps │ kinds           │ firstTitle                    │
+├─────────┼──────────────────────────────┼─────────────┼──────┼───────────┼────────────┼───────────┼──────┼─────────────────┼───────────────────────────────┤
+│ 0       │ 'staff / main question'      │ 'TH-6MHDKO' │ 1313 │ false     │ 9          │ 2         │ 3    │ 'doc+task+chat' │ 'SOP Pengiriman Barang v2'    │
+│ 1       │ 'manager / main question'    │ 'TH-FGRVVH' │ 630  │ false     │ 12         │ 2         │ 2    │ 'doc+task+chat' │ 'Kontrak PT Anugrah Logistik' │
+│ 2       │ 'staff / penalty'            │ 'TH-VXG8LG' │ 619  │ true      │ 0          │ 0         │ 0    │ '—'             │ '—'                           │
+│ 3       │ 'manager / penalty'          │ 'TH-CJEOIH' │ 626  │ false     │ 2          │ 0         │ 0    │ 'doc+chat'      │ 'Kontrak PT Anugrah Logistik' │
+│ 4       │ 'staff / kenari (forbidden)' │ 'TH-4ASW5N' │ 629  │ true      │ 0          │ 0         │ 0    │ '—'             │ '—'                           │
+│ 5       │ 'staff / nonexistent'        │ 'TH-70F6Y2' │ 613  │ true      │ 0          │ 0         │ 0    │ '—'             │ '—'                           │
+└─────────┴──────────────────────────────┴─────────────┴──────┴───────────┴────────────┴───────────┴──────┴─────────────────┴───────────────────────────────┘
+
+PASS  T01 forbidden == nonexistent (byte-identical body)
+PASS  T01 forbidden == out-of-scope content
+PASS  T04 latency floor >= 600ms (all asks)
+PASS  T06 staff and manager answers differ
+PASS  T06 same three-section shape
+PASS  T09 chat+doc+task synthesised
+PASS  T11 penalty visible to manager only
+PASS  T13 gap cards present
+PASS  T19 PII masked (no raw 16-digit NIK)
+
+First gap: G1 | no-cause | persetujuan perubahan jumlah PO dari 25 ton menjadi 20 ton
+Knower: Andi Wijaya
+Draft: Halo Andi, saya tidak menemukan catatan tertulis soal persetujuan perubahan jumlah PO dari 25 ton menjadi 20 ton. Apakah Anda tahu siapa yang menyetujui dan atas dasar apa?
